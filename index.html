@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traducteur langue imaginaire</title>
+</head>
+<body>
+    <h1>Traducteur langue imaginaire</h1>
+    <form>
+        <label for="phrase">Entrez une phrase à traduire :</label>
+        <input type="text" id="phrase" name="phrase" placeholder="Entrez une phrase...">
+        <button type="button" onclick="traduire()">Traduire</button>
+    </form>
+    <p id="resultat"></p>
+    <script>
+        function traduire() {
+            const phrase = document.getElementById("phrase").value;
+            const resultat = document.getElementById("resultat");
+
+            // Ici, tu peux ajouter ton propre code pour la "traduction" amusante.
+            // Par exemple, tu peux créer une liste de phrases drôles à afficher.
+
+            // Exemple : Afficher une phrase amusante aléatoire
+            const phrasesAmusantes = [
+                "vas travailler connard",
+                "fais tes devoirs FDP",
+                "vas travailler FDP",
+                "fais tes devoirs connards"
+            ];
+
+            const phraseAmusante = phrasesAmusantes[Math.floor(Math.random() * phrasesAmusantes.length)];
+            resultat.textContent = phraseAmusante;
+        }
+    </script>
+</body>
+</html>
